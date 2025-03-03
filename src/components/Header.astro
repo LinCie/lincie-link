@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+import profile from "../assets/profile.png";
+---
+
+<header
+  class="bg-background/10 flex flex-col items-center justify-center rounded-2xl p-6 shadow-2xl backdrop-blur-sm"
+>
+  <Image
+    src={profile}
+    alt=""
+    aria-hidden="true"
+    class="mb-3 size-24 rounded-full object-cover md:mb-4 md:size-28"
+  />
+  <h1 class="text-foreground mb-1 text-2xl font-bold md:text-3xl">LinCie</h1>
+  <div class="text-foreground">Your average weeb</div>
+</header>

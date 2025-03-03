@@ -1,19 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+import Header from "../components/Header.astro";
 ---
 
 <Layout>
-  <main>
-    <div class="fixed inset-0">
-      <img
-        class="relative h-screen w-full object-cover"
-        alt=""
-        aria-hidden="true"
-        src="/bg.gif"
-        decoding="async"
-        loading="lazy"
-      />
-      <div class="absolute inset-0 bg-black/60"></div>
+  <div class="fixed inset-0">
+    <img
+      class="relative h-screen w-full object-cover"
+      alt=""
+      aria-hidden="true"
+      src="/bg.gif"
+      decoding="async"
+      loading="lazy"
+    />
+    <div class="absolute inset-0 bg-black/60"></div>
+  </div>
+
+  <main class="relative z-10 min-h-screen w-full">
+    <div class="mx-auto my-20 max-w-2xl p-3">
+      <Header />
     </div>
   </main>
 </Layout>
