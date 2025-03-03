@@ -2,4 +2,18 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout />
+<Layout>
+  <main>
+    <div class="fixed inset-0">
+      <img
+        class="relative w-full h-screen object-cover"
+        alt=""
+        aria-hidden="true"
+        src="/bg.gif"
+        decoding="async"
+        loading="lazy"
+      />
+      <div class="inset-0 absolute bg-black/60"></div>
+    </div>
+  </main>
+</Layout>
