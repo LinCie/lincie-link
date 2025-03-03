@@ -1,0 +1,55 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface ILinkButton {
+  name: string;
+  href: string;
+  icon: string;
+}
+
+const linkButtons: ILinkButton[] = [
+  {
+    name: "My personal website",
+    href: "https://lincie.me",
+    icon: "website",
+  },
+  {
+    name: "Need a simple discord music bot? Click me!",
+    href: "https://mika.lincie.me",
+    icon: "robot",
+  },
+  {
+    name: "Looking for a comprehensive ERP? Try Nerpai!",
+    href: "https://nerpai.space",
+    icon: "website",
+  },
+  {
+    name: "Help me fund my websites",
+    href: "https://ko-fi.com/lincie",
+    icon: "coins",
+  },
+  {
+    name: "Why not join my discord server?",
+    href: "https://discord.gg/zxWrGnysFE",
+    icon: "discord",
+  },
+];
+---
+
+<div
+  class="bg-background/10 flex flex-col items-center justify-center gap-2 space-y-2 rounded-2xl p-6 shadow-2xl backdrop-blur-sm"
+>
+  {
+    linkButtons.map((linkButton) => {
+      return (
+        <a href={linkButton.href} target="_blank" class="w-full">
+          <div class="bg-foreground/90 text-background flex size-full cursor-pointer items-center justify-center gap-4 rounded-lg border px-5 py-3 font-semibold shadow-2xl backdrop-blur-sm transition-opacity hover:opacity-80">
+            <Icon name={linkButton.icon} class="size-6" aria-hidden="true" />
+            <span class="flex-1 text-center">{linkButton.name}</span>
+            <Icon name={linkButton.icon} class="size-6" aria-hidden="true" />
+          </div>
+        </a>
+      );
+    })
+  }
+</div>
