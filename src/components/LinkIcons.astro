@@ -1,0 +1,32 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface IIcons {
+  name: string;
+  href: string;
+}
+
+const icons: IIcons[] = [
+  { name: "github", href: "https://github.com/LinCie" },
+  { name: "youtube", href: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" },
+  {
+    name: "spotify",
+    href: "https://open.spotify.com/user/31oyxnawj25zik4xbwog3emhjsmi",
+  },
+];
+---
+
+<div
+  class="bg-background/10 flex items-center justify-center gap-4 rounded-2xl p-6 shadow-2xl backdrop-blur-sm"
+>
+  {
+    icons.map((icon) => (
+      <a href={icon.href} aria-label={icon.name} target="_blank">
+        <Icon
+          name={icon.name}
+          class="text-foreground size-10 transition-opacity hover:opacity-80"
+        />
+      </a>
+    ))
+  }
+</div>

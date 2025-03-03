@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 
 import Header from "../components/Header.astro";
+import LinkIcons from "../components/LinkIcons.astro";
 ---
 
 <Layout>
@@ -18,8 +19,9 @@ import Header from "../components/Header.astro";
   </div>
 
   <main class="relative z-10 min-h-screen w-full">
-    <div class="mx-auto my-20 max-w-2xl p-3">
+    <div class="mx-auto my-20 max-w-2xl space-y-6 p-3">
       <Header />
+      <LinkIcons />
     </div>
   </main>
 </Layout>
