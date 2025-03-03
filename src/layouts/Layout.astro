@@ -1,15 +1,32 @@
 ---
 import "../styles/global.css";
+import { SEO } from "astro-seo";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <SEO
+      charset="UTF-8"
+      title="LinCie's Link Hub"
+      description="All the links for my personal projects, random links, and sponsored stuffs! All in one hub!"
+      openGraph={{
+        basic: { title: "LinCie's Link Hub", type: "website", image: "" },
+      }}
+      twitter={{
+        creator: "@Ke_Lin_Cie",
+        title: "LinCie's Link Hub",
+        description:
+          "All the links for my personal projects, random links, and sponsored stuffs! All in one hub!",
+      }}
+      extend={{
+        link: [{ rel: "icon", href: "/favicon.ico", type: "image/x-icon" }],
+        meta: [
+          { name: "viewport", content: "width=device-width" },
+          { name: "generator", content: Astro.generator },
+        ],
+      }}
+    />
   </head>
   <body>
     <slot />
