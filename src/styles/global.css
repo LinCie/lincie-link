@@ -4,3 +4,7 @@
   --color-background: #2e3440;
   --color-foreground: #eceff4;
 }
+
+@theme {
+  --font-display: "Merienda Variable", cursive;
+}
